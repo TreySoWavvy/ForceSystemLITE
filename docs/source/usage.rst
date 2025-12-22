@@ -40,8 +40,13 @@ To designate what **Mastery Level** players receive upon joining, set ``Configur
 
 Conversely, if you wish to assign a **Force Role** to players upon joining instead, set ``Configuration["FREEPLAY_ROLE"] (string)`` to match a **Force Role** already created in your ``ROLE`` table (more or that below)
 
+.. code-block:: lua
+   Configuration["FREEPLAY_ENABLED"] = false; 		--// Whether free play mode is enabled or not.
+   Configuration["FREEPLAY_LEVEL"] = 6; 				--// What level of mastery all players are given during freeplay.
+   Configuration["FREEPLAY_LEVEL_ROLE"] = "None";	--// Give all players a force role upon joining.
 
-All players who **didnt already have abilities assigned to them** will now be able to access the ones specified here. So that you know,** players who already have abilities assigned or purchased will still retain those abilities.** 
+   
+**Note**: players who already have abilities assigned or purchased will still retain those abilities.** 
 
 
 Natural Birth Mode
@@ -49,14 +54,30 @@ Natural Birth Mode
 **Natural Birth** Mode was designed to allow players to experience the Force System **naturally**, while providing existing users with consistent opponents.
 This keeps force-based gameplay from being stagnant, allowing players on opposing (*and sometimes the same*) teams to join and have a percent chance of randomly obtaining a force **Mastery Level**
 
-This setting can be enabled by setting ``Configuration["NATURAL_BORN_ENABLED"] (bool)`` to ``true``, and the percent chance can be controlled by changing ``Configuration["NATURAL_BORN_CHANCE"] (int)`` to a number between ``0`` and ``1`` (default is ``.15`).
+This setting can be enabled by setting ``Configuration["NATURAL_BORN_ENABLED"] (bool)`` to ``true``, and the percent chance can be controlled by changing ``Configuration["NATURAL_BORN_CHANCE"] (int)`` to a number between ``0`` and ``1`` (default is `.15`).
 
 .. code-block:: lua
 
-   Configuration["NATURAL_BORN_ENABLED"] = false;									--// Whether or not players have a chance of being randomly given force abilities upon joining.
-   Configuration["NATURAL_BORN_CHANCE"] = .15;										--// The percent chance they have to get it.
+   Configuration["NATURAL_BORN_ENABLED"] = false;	--// Whether or not players have a chance of being randomly given force abilities upon joining.
+   Configuration["NATURAL_BORN_CHANCE"] = .15;		--// The percent chance they have to get it.
 
 
+Force Energy
+------------
+**Force Energy** is a stamina that can be consumed upon using an ability. All abilities can consume stamina if it is enabled, and players wont be able to use that ability if they don't have enough.
+The base energy players can spawn with can be set with the ``Configuration["BASE_ENERGY"]`` property. Upon using energy, a delay will occur before they will begin regenerating that energy back.
+
+The **Rate** and **Delay** can be customized to enable unique energy regeneration.
+
+**Note:** It is **highly** that this setting is enabled to allow for **fair usage** of force abilities in live gameplay. Failure to configure this properly may result in power imbalances within the game and potential abuse by Force Users.
+
+.. code-block:: lua
+   Configuration["ENERGY_ENABLED"] = false; --// Whether energy consumption is enabled or not.
+   Configuration["BASE_ENERGY"] = 250;     --// The base energy all players spawn with.
+   Configuration["INITIAL_ENERGY_REGEN_DELAY"] = 5;     --// How many seconds after energy is consumed, the user will begin regenerating their energy.
+
+   Configuration["ENERGY_REGEN_RATE"] = 2.5;   --// The amount of energy that will be regenerated.
+   Configuration["REGEN_RATE_DELAY"] = .15;    --// The delay between energy regen ticks.
 
 
 To use Lumache, first install it using pip:
