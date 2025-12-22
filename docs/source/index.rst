@@ -1,8 +1,9 @@
-Welcome to Project Star Forge's Force System LITE documentation!
+**Star Forge Systems**
+Welcome to the Force System LITE documentation!
 ===================================
 
 **Force System LITE** is a simplified Force System meant to be utilized in Star Wars Games
-on 'Roblox <https://www.roblox.com/home>'.
+on the <a href="https://www.roblox.com/home" target="_blank">Roblox</a> Platform.
 
 It's designed to be a "Plug & Play" style system in which all of the appropriate files are contained
 within the package, and need to be moved into place.
