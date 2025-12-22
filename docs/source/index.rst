@@ -1,15 +1,22 @@
-Welcome to Lumache's documentation!
+Welcome to Project Star Forge's Force System LITE documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Force System LITE** is a simplified Force System meant to be utilized in Star Wars Games
+on 'Roblox <https://www.roblox.com/home>'.
+
+It's designed to be a "Plug & Play" style system in which all of the appropriate files are contained
+within the package, and need to be moved into place.
+
+The system offers over **15+** unique abilities, as well as passive "background" abilities that do not
+need to be activated.
+
+This adds depth to your Star Wars Roleplay game, by offering players the ability to utilize mystical force
+abilities against each other.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
-.. note::
+.. Please Note::
 
    This project is under active development.
 
