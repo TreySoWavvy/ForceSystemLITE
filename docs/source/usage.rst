@@ -24,7 +24,7 @@ This system operates similarly to most **Admin Systems**, in which you can only 
 All abilities have a ``Level`` property contained within their ModuleScript. Developers can adjust this level as they see fit, based on the **importance** of the ability or its **rarity**.
 
 
-**Force Roles**, however, __**subvert**__ the **level system**. Force Roles allow developers to give abilities of **all** levels to a player, regardless of what their actual Mastery Level is.
+**Force Roles**, however, **subvert** the **level system**. Force Roles allow developers to give abilities of **all** levels to a player, regardless of what their actual Mastery Level is.
 A helpful analogy is the Jedi Temple Guard, whose abilities are taught at different stages of a Jedi's training. These sets of abilities can be assigned to players to give them different abilities at different levels, disregarding the mastery.
 
 
@@ -50,6 +50,11 @@ Natural Birth Mode
 This keeps force-based gameplay from being stagnant, allowing players on opposing (*and sometimes the same*) teams to join and have a percent chance of randomly obtaining a force **Mastery Level**
 
 This setting can be enabled by setting ``Configuration["NATURAL_BORN_ENABLED"] (bool)`` to ``true``, and the percent chance can be controlled by changing ``Configuration["NATURAL_BORN_CHANCE"] (int)`` to a number between ``0`` and ``1`` (default is ``.15`).
+
+.. code-block:: console
+   Configuration["NATURAL_BORN_ENABLED"] = false;									--// Whether or not players have a chance of being randomly given force abilities upon joining.
+   Configuration["NATURAL_BORN_CHANCE"] = .15;										--// The percent chance they have to get it.
+
 
 To use Lumache, first install it using pip:
 
