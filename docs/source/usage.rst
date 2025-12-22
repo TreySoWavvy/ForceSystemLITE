@@ -51,9 +51,12 @@ This keeps force-based gameplay from being stagnant, allowing players on opposin
 
 This setting can be enabled by setting ``Configuration["NATURAL_BORN_ENABLED"] (bool)`` to ``true``, and the percent chance can be controlled by changing ``Configuration["NATURAL_BORN_CHANCE"] (int)`` to a number between ``0`` and ``1`` (default is ``.15`).
 
-.. code-block:: console
+.. code-block:: lua
+
    Configuration["NATURAL_BORN_ENABLED"] = false;									--// Whether or not players have a chance of being randomly given force abilities upon joining.
    Configuration["NATURAL_BORN_CHANCE"] = .15;										--// The percent chance they have to get it.
+
+
 
 
 To use Lumache, first install it using pip:
