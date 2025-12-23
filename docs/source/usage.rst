@@ -13,11 +13,11 @@ Force Mastery Levels vs Force Roles
 ------------
 To understand the system, you must know that Force Abilities are scaled on a **Mastery System** from **1** to **5**:
 
-- (1): Apprentice
-- (2): Novice
+- (1): **Apprentice** - The bare minimum force level. All players default to this. No abilities.
+- (2): **Novice** - The entry level force level. Basic abilities begin here.
 - (3): Adept
 - (4): Master
-- (5): Grand Master
+- (5): Grand Master - The supreme force user. Has access to all abilities.
 
 This system operates similarly to most **Admin Systems**, in which you can only use the ability of **your level and below**. A Novice cannot use a Master's ability, but a Master can use all abilities Master and below.
 
