@@ -142,6 +142,7 @@ Or, you can provide a **Mastery Level**:
 **Method Two: Assigning to a SINGULAR Group rank**
 ------------
 Identical to the ones above, except this time we will provide a ``Rank`` value as well:
+
 .. code-block:: lua
 
 	{
@@ -157,6 +158,7 @@ Identical to the ones above, except this time we will provide a ``Rank`` value a
 ------------
 Identical to the one above, except this time we will create an ``array`` of group ranks instead of using a singular number.
 In the example below, we will be assigning Consular to group ranks 12, 13, and 14, respectively:
+
 .. code-block:: lua
 
 	{
