@@ -65,13 +65,14 @@ This setting can be enabled by setting ``Configuration["NATURAL_BORN_ENABLED"] (
 Force Energy
 ------------
 **Force Energy** is a stamina that can be consumed upon using an ability. All abilities can consume stamina if it is enabled, and players wont be able to use that ability if they don't have enough.
-The base energy players can spawn with can be set with the ``Configuration["BASE_ENERGY"]`` property. Upon using energy, a delay will occur before they will begin regenerating that energy back.
+The base energy players can spawn with can be set with the ``Configuration["BASE_ENERGY"]`` property. Upon using energy, a delay will occur before they begin regenerating that energy.
 
 The **Rate** and **Delay** can be customized to enable unique energy regeneration.
 
 **Note:** It is **highly** that this setting is enabled to allow for **fair usage** of force abilities in live gameplay. Failure to configure this properly may result in power imbalances within the game and potential abuse by Force Users.
 
 .. code-block:: lua
+
    Configuration["ENERGY_ENABLED"] = false; --// Whether energy consumption is enabled or not.
    Configuration["BASE_ENERGY"] = 250;     --// The base energy all players spawn with.
    Configuration["INITIAL_ENERGY_REGEN_DELAY"] = 5;     --// How many seconds after energy is consumed, the user will begin regenerating their energy.
