@@ -90,13 +90,13 @@ Below is an example of some specific roles within a Jedi Order group:
 
 .. code-block:: lua
 
-Configuration["ROLE"] = { --// Assignable roles & the abilities they have.
-	["Temple Guard"] = {"Force Push", "Force Pull", "Force Fortitude", "Force Foresight", "Force Sever"};
-
-	["Jedi Sentinel"] = {"Force Teleport", "Force Cloak"};
-
-   ["Jedi Consular"] = {"Force Heal", "Force Sense"};
-}
+	Configuration["ROLE"] = { --// Assignable roles & the abilities they have.
+		["Temple Guard"] = {"Force Push", "Force Pull", "Force Fortitude", "Force Foresight", "Force Sever"};
+	
+		["Jedi Sentinel"] = {"Force Teleport", "Force Cloak"};
+	
+	   ["Jedi Consular"] = {"Force Heal", "Force Sense"};
+	}
 
 These will be used later when assigning them to players. 
 **Note:** Roles supersede Mastery Levels. Meaning if a player is assigned an ability via a role, they can use it regardless of their actual level.
