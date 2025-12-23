@@ -114,8 +114,35 @@ We will now make changes to the ``Configuration["ForceUsers"]`` dictionary.
 
 
 There are **Two** ways to assign abilities to users:
-	- Group: A player is a member of a specific group, with a specific rank(s)
-	- Player: A player's name and/or UserId is hardcoded.
+	- **Group:** A player is a member of a specific group, with a specific rank(s)
+	- **Player:** A player's name and/or UserId is hardcoded.
+
+
+
+**Method One: Assigning to an ENTIRE Group**
+------------
+To assign a mastery level or role to an entire group, use the following table template below.
+You can either provide **Force Role**:
+
+.. code-block:: lua
+	
+	{
+		Type = "Group"; --// Specifies this entry is a group.
+		GroupId = 0;	--// Enter The GroupId here.
+
+		Role = "Jedi Counsular"; -- EVERY member of this group will recieve "Jedi Counsular" force role & it's abilities.
+	};
+	
+or, you can provide a **Mastery Level**:
+
+.. code-block:: lua
+	
+	{
+		Type = "Group"; --// Specifies this entry is a group.
+		GroupId = 0;	--// Enter The GroupId here.
+
+		Level 3; -- EVERY member of this group will receive Level 3 Mastery, meaning they can use Level 3 abilities and below.
+	};
 
 
 To use Lumache, first install it using pip:
