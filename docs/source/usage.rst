@@ -91,11 +91,11 @@ Below is an example of some specific roles within a Jedi Order group:
 .. code-block:: lua
 
 	Configuration["ROLE"] = { --// Assignable roles & the abilities they have.
-		["Temple Guard"] = {"Force Push", "Force Pull", "Force Fortitude", "Force Foresight", "Force Sever"};
+		["Temple Guard"] = {"Force Push", "Force Pull", "Force Fortitude", "Force Foresight", "Force Sever"}; -- Give a variety of abilities to Temple Guards needed to fulfill their duties.
 	
-		["Jedi Sentinel"] = {"Force Teleport", "Force Cloak"};
+		["Jedi Sentinel"] = {"Force Teleport", "Force Cloak"}; --Give teleport and cloak to Sentinels.
 	
-	   ["Jedi Consular"] = {"Force Heal", "Force Sense"};
+	   	["Jedi Consular"] = {"Force Heal", "Force Sense"}; --Gave Healing and sensing ability to those assigned as Consulars.
 	}
 
 These will be used later when assigning them to players. 
