@@ -105,6 +105,19 @@ These will be used later when assigning them to players.
 **Note:** Roles supersede Mastery Levels. Meaning if a player is assigned an ability via a role, they can use it regardless of their actual level.
 
 
+Assigning Levels/Roles To Users
+------------
+
+Now let's get to the part you actually care about: Assigning them to players.
+
+We will now make changes to the ``Configuration["ForceUsers"]`` dictionary.
+
+
+There are **Two** ways to assign abilities to users:
+- Group: A player is a member of a specific group, with a specific rank(s)
+- Player: A player's name and/or UserId is hardcoded.
+
+
 To use Lumache, first install it using pip:
 
 .. code-block:: console
