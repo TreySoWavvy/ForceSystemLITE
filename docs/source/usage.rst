@@ -89,14 +89,12 @@ Any number of roles can be created, and abilities must be listed as an ``array``
 Below is an example of some specific roles within a Jedi Order group:
 
 .. code-block:: lua
-
 	Configuration["ROLE"] = { --// Assignable roles & the abilities they have.
 		["Temple Guard"] = {"Force Push", "Force Pull", "Force Fortitude", "Force Foresight", "Force Sever"}; -- Give a variety of abilities to Temple Guards needed to fulfill their duties.
 	
 		["Jedi Sentinel"] = {"Force Teleport", "Force Cloak"}; --Give teleport and cloak to Sentinels.
 	
 	   	["Jedi Consular"] = {"Force Heal", "Force Sense"}; --Gave Healing and sensing ability to those assigned as Consulars.
-	}
 
 These will be used later when assigning them to players. 
 **Note:** Roles supersede Mastery Levels. Meaning if a player is assigned an ability via a role, they can use it regardless of their actual level.
