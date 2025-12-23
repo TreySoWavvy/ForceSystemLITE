@@ -105,23 +105,17 @@ These will be used later when assigning them to players.
 **Note:** Roles supersede Mastery Levels. Meaning if a player is assigned an ability via a role, they can use it regardless of their actual level.
 
 
-Assigning Levels/Roles To Users
-------------
+Assigning Levels/Roles To Group Members
+=====
 
-Now let's get to the part you actually care about: Assigning them to players.
+Now let's get to the part you actually care about: Assigning them to a group member.
 
-We will now make changes to the ``Configuration["ForceUsers"]`` dictionary.
+We will now modify the ``Configuration["ForceUsers"]`` table by adding entries.
 
-
-There are **Two** ways to assign abilities to users:
-	- **Group:** A player is a member of a specific group, with a specific rank(s)
-	- **Player:** A player's name and/or UserId is hardcoded.
-
-
+Below are the various methods for assigning force abilities to group members.
 
 **Method One: Assigning to an ENTIRE Group**
 ------------
-To assign a mastery level or role to an entire group, use the following table template below.
 You can either provide **Force Role**:
 
 .. code-block:: lua
@@ -133,7 +127,7 @@ You can either provide **Force Role**:
 		Role = "Jedi Counsular"; -- EVERY member of this group will recieve "Jedi Counsular" force role & it's abilities.
 	};
 	
-or, you can provide a **Mastery Level**:
+Or, you can provide a **Mastery Level**:
 
 .. code-block:: lua
 	
@@ -145,29 +139,32 @@ or, you can provide a **Mastery Level**:
 	};
 
 
-To use Lumache, first install it using pip:
+**Method Two: Assigning to a SINGULAR Group rank**
+------------
+Identical to the ones above, except this time we will provide a ``Rank`` value as well:
+.. code-block:: lua
 
-.. code-block:: console
+	{
+		Type = "Group"; --// Specifies this entry is a group.
+		GroupId = 0;	--// Enter The GroupId here.
+		Rank = 14; --// The specific rank in this group that will receive the abilities.
 
-   (.venv) $ pip install lumache
+		Role = "Jedi Counsular";
+	};
 
-Creating recipes
-----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+**Method Three: Assigning to a SPECIFIC Group ranks**
+------------
+Identical to the one above, except this time we will create an ``array`` of group ranks instead of using a singular number.
+In the example below, we will be assigning Consular to group ranks 12, 13, and 14, respectively:
+.. code-block:: lua
 
-.. autofunction:: lumache.get_random_ingredients
+	{
+		Type = "Group"; --// Specifies this entry is a group.
+		GroupId = 0;	--// Enter The GroupId here.
+		Rank = {12, 13, 14}; --// The specific ranks in this group that will receive "Jedi Counsular" force role and its abilities.
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+		Role = "Jedi Counsular";
+	};
 
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
 
