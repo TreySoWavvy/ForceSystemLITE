@@ -182,6 +182,7 @@ We will use the user's `UserId`, a unique identifier linked to that specific acc
 
 Before we begin, here's a quick method for getting the UserId from a Roblox username. If you run this line of code in the **Command Bar** in **Roblox Studio**, it will print out a
 ``UserId`` if one exists with that username:
+
 .. code-block:: lua
 
 	print(game.Players:GetUserIdFromNameAsync("Name") -- prints a UserId from a provided name string.
