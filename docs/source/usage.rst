@@ -135,7 +135,7 @@ Or, you can provide a **Mastery Level**:
 		Type = "Group"; --// Specifies this entry is a group.
 		GroupId = 0;	--// Enter The GroupId here.
 
-		Level 3; -- EVERY member of this group will receive Level 3 Mastery, meaning they can use Level 3 abilities and below.
+		Level = 3; -- EVERY member of this group will receive Level 3 Mastery, meaning they can use Level 3 abilities and below.
 	};
 
 
@@ -170,3 +170,35 @@ In the example below, we will be assigning Consular to group ranks 12, 13, and 1
 	};
 
 
+Assigning Levels/Roles To Players
+=====
+We will now begin assigning abilities to specific players. This applies to anyone with a unique set assigned to them, such as main characters,
+lore characters, etc.
+
+We will use the user's `UserId`, a unique identifier linked to that specific account.
+
+**NOTE: Do not use usernames as usernames can/will change, rendering your system vulnerable and outdated.**
+
+You can either provide **Force Role**:
+
+.. code-block:: lua
+	
+	{
+		Type = "Player"; --// Specifies this entry is a Player.
+		UserId = 0;	--// Enter the player's UserId here.
+
+		Role = "Jedi Counsular"; -- The player with this UserId will receive Jedi Counsular abilities.
+	};
+	
+Or, you can provide a **Mastery Level**:
+
+.. code-block:: lua
+	
+	{
+		Type = "Player"; --// Specifies this entry is a Player.
+		UserId = 0;	--// Enter the player's UserId here.
+
+		Level = 3; -- The player with this UserId will receive Level 3 Mastery, meaning they can use Level 3 abilities and below.
+	};
+
+You should only use this if you plan to assign a unique ability to that particular player. Otherwise, link them to groups and Force Roles.
