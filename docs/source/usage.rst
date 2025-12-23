@@ -114,8 +114,8 @@ We will now make changes to the ``Configuration["ForceUsers"]`` dictionary.
 
 
 There are **Two** ways to assign abilities to users:
-- Group: A player is a member of a specific group, with a specific rank(s)
-- Player: A player's name and/or UserId is hardcoded.
+	- Group: A player is a member of a specific group, with a specific rank(s)
+	- Player: A player's name and/or UserId is hardcoded.
 
 
 To use Lumache, first install it using pip:
