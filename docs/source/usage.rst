@@ -81,6 +81,27 @@ The **Rate** and **Delay** can be customized to enable unique energy regeneratio
    Configuration["REGEN_RATE_DELAY"] = .15;    --// The delay between energy regen ticks.
 
 
+
+Defining Force Roles
+------------
+To create a set of force abilities, you can assign them to a **Role**. Roles can be created in the ``ROLE`` table within the ``Configuration`` ModuleScript.
+Any number of roles can be created, and abilities must be listed as an ``array``.
+Below is an example of some specific roles within a Jedi Order group:
+
+.. code-block:: lua
+
+Configuration["ROLE"] = { --// Assignable roles & the abilities they have.
+	["Temple Guard"] = {"Force Push", "Force Pull", "Force Fortitude", "Force Foresight", "Force Sever"};
+
+	["Jedi Sentinel"] = {"Force Teleport", "Force Cloak"};
+
+   ["Jedi Consular"] = {"Force Heal", "Force Sense"};
+}
+
+These will be used later when assigning them to players. 
+**Note:** Roles supersede Mastery Levels. Meaning if a player is assigned an ability via a role, they can use it regardless of their actual level.
+
+
 To use Lumache, first install it using pip:
 
 .. code-block:: console
