@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
+project = 'Force System Lite'
 copyright = '2021, Graziella'
-author = 'Graziella'
+author = 'Project Star Forge'
 
 release = '0.1'
 version = '0.1.0'
