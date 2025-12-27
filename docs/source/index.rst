@@ -27,4 +27,4 @@ Contents
 .. toctree::
 
    usage
-   api
+   abilities
