@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Force System Lite'
-copyright = '2021, Graziella'
+copyright = '2025, TreySoWavvy'
 author = 'Project Star Forge'
 
 release = '0.1'
